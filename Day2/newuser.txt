@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<form action="cp.html">
+<label>Enter your name:</label>
+<input type="text" name="usre" value="username"/><br>
+<label>Enter your Password:</label>
+<input type="password" name="pass" value="password"/><>br
+<label> Know yor language:</label>
+<input type="checkbox" name="language"/> English
+<input type="checkbox" name="language"/> Marathi
+<input type="checkbox" name="language"/> Hindi
+<input type="radio" name="gender" value="male">
+<input type="radio" name="gender" value="male">
+</form>
+</body>
+</html>

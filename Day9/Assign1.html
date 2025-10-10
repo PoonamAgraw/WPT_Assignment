@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+  
+     
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  
+  $("#content").load("https://jsonplaceholder.typicode.com/posts/1", function(response, status, err) {
+    if (status == "error") {
+      $("#content").html("Error loading content: " + err.statusText);
+    }
+  });
+  $.get("https://jsonplaceholder.typicode.com/posts/1")
+    .done(function(data) {
+      $("#result").html(`<pre>${JSON.stringify(data, null, 2)}</pre>`);
+    })
+    .fail(function() {
+      $("#result").text("Error loading data");
+    });
+</script>
+               
+</head>
+<body>
+      <div id="content">Loading content...</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+WebDriverManager.chromedriver().setup();
+WebDriver driver = new ChromeDriver();
+driver.get("www.google.com")
+driver.findelement(By.name("")).sendKeys("");
+driver.findelement(By.id("")).click();

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS methods</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script >function addStyle() {
+    try {
+        $('#myHeading').addClass('highlight');
+        console.log("Class 'highlight' added.");
+    } catch (error) {
+        console.error("Error in addStyle():", error.message);
+    } finally {
+        console.log("addStyle() executed.");
+    }
+}
+
+function removeStyle() {
+    try {
+        $('#myHeading').removeClass('highlight');
+        console.log("Class 'highlight' removed.");
+    } catch (error) {
+        console.error("Error in removeStyle():", error.message);
+    } finally {
+        console.log("removeStyle() executed.");
+    }
+}
+
+function toggleStyle() {
+    try {
+        $('#myHeading').toggleClass('highlight');
+        console.log("Class 'highlight' toggled.");
+    } catch (error) {
+        console.error("Error in toggleStyle():", error.message);
+    } finally {
+        console.log("toggleStyle() executed.");
+    }
+}</script>
+    <style>.highlight {
+    background-color: #647FBC;
+    color: #67C090;
+    font-weight: bold;
+}</style>
+</head>
+
+<body>
+    <h1 id="myHeading">Hello World</h1>
+    <button onclick="addStyle()">Styling </button>
+    <button onclick="removeStyle()">No styling</button>
+    <button onclick="toggleStyle()">Highlight</button>
+
+</body>
+
+</html>

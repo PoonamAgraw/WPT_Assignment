@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a+b;
+            document.getElementById("p1").innerText=output;
+        }
+        function sub(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a-b;
+            document.getElementById("p1").innerText=output;
+        }
+        function multiply(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a*b;
+            document.getElementById("p1").innerText=output;
+        }
+        function division(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a/b;
+            document.getElementById("p1").innerText=output;
+        }
+    </script>
+    
+</head>
+<body>
+   
+   <div style="background-color: azure;text-align: center;">
+    Enter  Num: <input type="number" id="t1"><br><br>
+   <button>7</button>
+   <button>8</button>
+   <button>9</button>
+    <button id="b3" onclick="multiply()">*</button><br>
+   <button>4</button>
+   <button>5</button>
+   <button>6</button>
+   <button id="b2" onclick="sub()">-</button><br>
+   <button>1</button>
+   <button>2</button>
+   <button>3</button>
+   <button id="b1" onclick="add()">+</button><br>
+   <button id="b5" onclick="display()">=</button>
+   <button>0</button>
+   <button>#</button>
+   <button id="b4" onclick="division()">/</button>
+   </div>
+</body>
+</html>

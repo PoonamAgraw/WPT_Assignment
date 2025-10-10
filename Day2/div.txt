@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>Div</title>
+</head>
+<body>
+<div   size="10"; style="Gadugi" ; weight="10" ;background-color:red>Artificial Intelligence (AI) is the creation of intelligent machines that can learn, reason, and problem-solve like humans, impacting various industries from healthcare and finance to education and entertainment. While AI offers benefits such as increased efficiency, personalized services, and the potential to solve complex problems, it also presents challenges, including job displacement, data privacy concerns, and ethical dilemmas surrounding its use. Addressing these issues is crucial for responsible development, ensuring AI benefits humanity by enhancing our quality of life and work. 
+</div>
+</iframe>
+</body>
+</html>

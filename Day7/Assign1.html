@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <script src="jquery-3.7.1.min.js" >
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                let a = $("#t1").val();
+                $("#t2").val(a).css("font-style","italic");
+                let a1 = $("#p1").text();
+                console.log(a1)
+                $("#p2").text(a1).css("font-style","italic")
+
+            })
+             $("#b2").click(function(){
+                let text= $("#t2").val();
+                $("#t2").text(text).css("text-decoration","underline")
+                let text1= $("#p2").text();
+                $("#p2").text(text1).css("text-decoration","underline")
+
+            })
+
+
+        })
+    </script>
+  
+</head>
+<body>
+  
+  <input id="t1" type="text"/>
+  <input id="t2" type="text"/>
+  <br><br>
+  <button id="b1" >Change Style</button>
+  <button id="b2">Underline</button>
+  <p id="p1">Hello</p>
+  <p id="p2"></p>
+</body>
+</html>

@@ -1,0 +1,8 @@
+ body { font-family: Arial; padding: 20px; }
+    input, button { margin: 5px; };
+
+#output { margin-top: 20px; font-weight: bold; };
+
+#h2{
+    color: aqua;
+}

@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Change Password</title>
+</head>
+<body>
+<form>
+<label>Enter your Password:</label>
+<input type="password" name="pass" value="password"/><br>
+<label>Conform your Password:</label>
+<input type="password" name="pass" /><br>
+</form>
+</body>
+</html>

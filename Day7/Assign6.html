@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #d1{
+            background-color: rgb(226, 177, 43);
+            width: 100px;
+            height: 100px;
+            position: absolute;
+           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: italic;
+            align-items: center;
+            font-size: medium;
+            text-align: center;
+            display: flex;
+            
+            
+        }
+        
+    </style>
+     <script src="jquery-3.7.1.min.js" >
+    </script>
+    <script>
+        $(document).ready(function(){
+           
+            $("#b1").click(function(){
+                $("#d1").fadeOut()
+            })
+             $("#b2").click(function(){
+                $("#d1").fadeIn()
+            })
+             $("#b3").click(function(){
+                $("#d1").fadeToggle()
+            })
+            
+            
+                
+        })
+    </script>
+    
+</head>
+<body>
+    <div id="d1">Hello World</div>
+    <br><br><br> <br><br><br><br><br>
+    <button id="b1" >fadeOut</button>
+    <button id="b2" >fadeIn</button>
+    <button id="b3" >fadeToggle</button>
+</body>
+</html>

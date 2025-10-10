@@ -1,0 +1,23 @@
+pwd
+ls
+mkdir
+ls -lt
+ls -lr
+rmdir
+date
+date +%T
+date +%H:%M
+touch file_name.extension
+namo file_name.txt/sh
+cat file_name.txt
+mv source_file_name  destination_file_name
+cp destination_file_name source_file_name
+
+ls -lrt
+chmod 777 file_name.extension
+nano file_name.sh
+#!/bin/sh
+name="Pqr"
+echo $name
+chmod 777 file_name.sh
+./file_name.sh
