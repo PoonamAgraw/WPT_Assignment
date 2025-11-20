@@ -1,0 +1,106 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+
+    <p id="p1">Data </p>
+  
+<button type="button" onclick="myFunction()"> Count! </button>
+     <script>
+
+function counter( ){
+let cnt = 0 ;
+
+    return  function() { return cnt += 1;};  
+ }
+    
+const add = counter();
+function myFunction(){
+  document.getElementById("p1").innerHTML = add();
+}
+
+
+    </script>
+
+
+ <!-- <body>
+
+    <p id="p1">Data </p>
+
+
+
+    <button type="button" onclick="counter()">Call Function</button>
+</body>   
+
+ <script>
+
+        let cnt = 0;   // global 
+        function counter() {
+            console.log("count ");
+            let cnt = 0;  // local 
+            cnt = cnt + 1;
+            document.getElementById("p1").innerHTML = "The counter is: " + cnt;
+            //another();
+        }
+
+        function another() {
+
+            cnt = 3;
+        }
+
+    </script> -->
+ <!-- <p id="p1">Dataaaaa </p>
+  
+
+
+     <button onclick="call()">Call Function</button>
+
+     <script>
+
+let cnt = 0 ;
+ function call(){
+let cnt = 0 ;
+    cnt  = cnt+ 1;
+    return cnt;
+  
+
+ }
+     document.getElementById("p1").innerHTML = "The counter is: " + cnt;
+ 
+
+
+    </script> -->
+    <!-- <head>
+    <script>
+
+//let cnt = 0 ;
+ function counter(){
+let cnt = 0 ;
+    cnt  = cnt+ 1;
+    //return cnt;
+   document.getElementById("p1").innerHTML = "The counter is: " + cnt;
+
+ }
+    
+ 
+
+
+    </script>
+</head>
+
+<body>
+
+    <p id="p1">Dataaaaa </p>
+  
+
+
+     <button type="button" onclick="counter()">Call Function</button>
+</body>
+	   -->
+ 
+ 
+</body>
+</html>

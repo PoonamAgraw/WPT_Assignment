@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        function showData() {
+    let request = new XMLHttpRequest();
+    request.open("GET", "https://jsonplaceholder.typicode.com/posts");
+    request.send();
+
+    request.onload = function () {
+        if (this.status === 200) {
+            let data = JSON.parse(this.responseText);
+            let table = document.getElementById("t1");
+
+            data.forEach(item => {
+                let row = table.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                cell1.innerText = item.id;
+                cell2.innerText = item.title;
+            });
+        }
+    };
+}
+
+window.onload = showData;
+
+    </script>
+    <style>
+        body {
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 20px;
+
+    text-align: center;
+}
+
+#h1 {
+  background-color: cornsilk;
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+#t1 {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+    </style>
+
+</head>
+
+<body>
+    <h1 id="h1">The Id And Title For Given Jnson File Is: </h1>
+
+    <table id="t1">
+        <tr>
+            <th>id</th>
+            <th>Title</th>
+        </tr>
+    </table>
+</body>
+
+</html>

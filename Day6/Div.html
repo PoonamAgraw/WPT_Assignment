@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+            position: absolute;
+        }
+        .box2 {
+            width: 50px;
+            height: 50px;
+           background-color: brown;
+            position: absolute;
+        }
+    </style>
+</head>
+<body onload="startAnimation()">
+
+    <div id="d1" class="box1" style="left: 1px;"></div>
+    <div id="d2" class="box2" style="right: 1px;"></div>
+</body>
+<script>
+
+
+function startAnimation() {
+           
+            let pos1 = 0;
+            const elem1 = document.getElementById("d1");
+            const id1 = setInterval(frame1, 5);
+            
+            function frame1() {
+                if (pos1 >= 500) {
+                    clearInterval(id1);
+                   
+                    startSecondAnimation();
+                } else {
+                    pos1++;
+                    elem1.style.top = pos1 + "px";
+                    elem1.style.left = pos1 + "px";
+                }
+            }
+
+           
+            function startSecondAnimation() {
+                let pos2 = 0;
+                const elem2 = document.getElementById("d2");
+                const id2 = setInterval(frame2, 5);
+                
+                function frame2() {
+                    if (pos2 >= 500) {
+                        clearInterval(id2);
+                    } else {
+                        pos2++;
+                        elem2.style.top = pos2 + "px";
+                        elem2.style.right = pos2 + "px";
+                    }
+                }
+            }
+        }
+
+</script> 
+</html>

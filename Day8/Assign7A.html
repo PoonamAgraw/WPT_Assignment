@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js" >
+    </script>
+    <script>
+        function add(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a+b;
+            document.getElementById("p1").innerText=output;
+        }
+        function sub(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a-b;
+            document.getElementById("p1").innerText=output;
+        }
+        function multiply(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a*b;
+            document.getElementById("p1").innerText=output;
+        }
+        function division(){
+            let a = document.getElementById("t1").value;
+            let b = document.getElementById("t2").value;
+            let output = a/b;
+            document.getElementById("p1").innerText=output;
+        }
+    </script>
+</head>
+<body>
+   Enter First Num: <input type="number" id="t1"><br><br>
+   Enter Second Num: <input type="number" id="t2"><br><br>
+   Result is:<p id="p1"></p>
+   <button id="b1" onclick="add()">Addition</button>
+   <button id="b2" onclick="sub()">Substract</button>
+   <button id="b3" onclick="multiply()">Multiply</button>
+   <button id="b4" onclick="division()">Division</button>
+   
+</body>
+</html>

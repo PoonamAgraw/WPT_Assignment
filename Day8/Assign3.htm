@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Data</title>
+    <script>
+        function showData() {
+           
+            let table = document.getElementById("t1");
+            table.innerHTML = `<tr><th>id</th><th>Title</th><th>Body</th></tr>`;
+
+            let userId = document.getElementById("userId").value;
+
+            if (!userId) {
+                alert("Please enter a user ID.");
+                return;
+            }
+
+            let request = new XMLHttpRequest();
+            request.open("GET", `https://jsonplaceholder.typicode.com/posts/${userId}`);
+            request.send();
+
+            request.onload = function () {
+                if (this.status === 200) {
+                    let item = JSON.parse(this.responseText);
+                    let row = table.insertRow();
+                    let cell1 = row.insertCell(0);
+                    let cell2 = row.insertCell(1);
+                    let cell3 = row.insertCell(2);
+                    cell1.innerText = item.id;
+                    cell2.innerText = item.title;
+                    cell3.innerText = item.body;
+                } else if (this.status === 404) {
+                    alert(" Given ID not found.");
+                } 
+            };
+
+            
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        #h1 {
+            background-color: cornsilk;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+        }
+
+        #t1 {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">The ID, Title, and Body for a Given Post is: </h1>
+    <label for="userId">Enter Post ID:</label>
+    <input type="number" id="userId" name="userId" min="1" max="100">
+    <button onclick="showData()">Search</button>
+
+    <table id="t1">
+        <tr>
+            <th>id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </table>
+</body>
+</html>

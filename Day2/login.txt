@@ -1,0 +1,14 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+<form action="newuser.html">
+<label>Enter your name:</label>
+<input type="text" name="usre" value="username"/>
+<label>Enter your Password:</label>
+<input type="password" name="pass" value="password"/>
+<input type="button" name="login"/>
+</form>
+</body>
+</html>

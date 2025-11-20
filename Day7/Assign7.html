@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="jquery-3.7.1.min.js" >
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+         $("#b1").click(function(){
+               $("#d1").slideDown()
+            })
+            $("#b2").click(function(){
+               $("#d1").slideUp()
+            })
+            $("#b3").click(function(){
+               $("#d1").slideToggle()
+            })
+             $("#b4").click(()=>{
+               $("#d1").stop()
+            })
+        })
+        </script>
+</head>
+<body>
+    <div id="d1" style="background-color: black;
+    height:50px;width:50px;position:absolute">
+    </div>
+    <br><br><br> <br><br><br><br><br><br> <br><br><br>
+    <button id="b1" >SlideDown</button>
+    <button id="b2" >SlideUp</button>
+    <button id="b3" >SlideUpDown</button>
+    <button id="b4" >Stop</button>
+</body>
+</html>

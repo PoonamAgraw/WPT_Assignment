@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        #formContainer {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+       
+
+        button {
+            margin: 10px;
+            padding: 8px 16px;
+      background-color: darksalmon;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: azure;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+           background-color: darkslategray;
+           color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Enter Employee Data </h2>
+    <div id="formContainer">
+        <label for="fname">
+            Enter Your Name:
+        </label>
+        <input type="text" id="fname" placeholder="Enter First Name">
+         <label for="lname">
+            Enter Your Last Name:
+        </label>
+        <input type="text" id="lname" placeholder="Enter Last Name ">
+        <label for="email">
+            Enter Your Email ID:
+        </label>
+        <input type="email" id="email" placeholder="Enter Email">
+       
+        <label for="DOB">
+            Enter Date Of Birth:
+        </label>
+        <input type="date" id="DOB" placeholder="Enter Date Of Birth">
+        <br>
+        <button onclick="addData()">Add</button>
+        <br>
+    </div>
+    <h2>Display Table Data  </h2>
+    <table id="outputTable">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Date Of Birth</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+    <script>
+        function addData() {
+        
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let email = document.getElementById("email").value;
+            let date = document.getElementById("DOB").value;
+
+
+            let table = document.getElementById("outputTable");
+            let newRow = table.insertRow(table.rows.length);
+
+       
+            newRow.insertCell(0).innerHTML = fname;
+            newRow.insertCell(1).innerHTML = lname;
+            newRow.insertCell(2).innerHTML = email;
+            newRow.insertCell(3).innerHTML = date;
+            newRow.insertCell(4).innerHTML =
+                '<button onclick="editData(this)">Edit</button>' +
+                '<button onclick="deleteData(this)">Delete</button>';
+
+          
+            clearInputs();
+        }
+
+        function editData(button) {
+
+
+            let row = button.parentNode.parentNode;
+
+        
+            let fnameCell = row.cells[0];
+            let lnameCell = row.cells[1];
+            let emailCell = row.cells[2];
+            let dateCell = row.cells[3];
+
+         
+            let fname =
+                prompt("Enter the updated First name:",
+                    nameCell.innerHTML);
+            let lname =
+                prompt("Enter the updated Last Name:",
+                    emailCell.innerHTML);
+            let email =
+                prompt("Enter the updated Email:",
+                    mobileCell.innerHTML
+                );
+            let DOB =
+                prompt("Enter the updated Date Of Birth:",
+                    addressCell.innerHTML
+                );
+
+          
+            nameCell.innerHTML = fname;
+            emailCell.innerHTML = lname;
+            mobileCell.innerHTML = email;
+            addressCell.innerHTML = date;
+        }
+
+        function deleteData(button) {
+
+       
+            let row = button.parentNode.parentNode;
+
+            
+            row.parentNode.removeChild(row);
+        }
+		
+		
+		
+		
+		
+
+        function clearInputs() {
+
+           
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("DOB").value = "";
+        }
+    </script>
+</body>
+
+</html>

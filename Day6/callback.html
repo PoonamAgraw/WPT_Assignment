@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!-- <body onload ="alert('hi');"> -->
+<body onload="setTimeout(()=>{},3000);">
+<h1>Display time</h1>
+<h1 id="demo">Time </h1>
+<h2 id="demo1">Date</h2>
+<script>
+setInterval(myFunction, 1000);
+function myFunction() {
+  let d = new Date();
+  let d1= new Date();
+
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+  
+ document.getElementById("demo1").innerHTML=d1
+// .getDay() + ":" +
+//   d1.getMonth() + ":" +
+//   d1.getFullYear();
+//   clearInterval();
+}
+//myFunction();
+
+</script>
+</body>
+</html>
